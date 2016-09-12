@@ -136,6 +136,7 @@ main ul li {
 
 h2,
 h3,
+h4,
 h5 {
 	color: #268fca;
 }
@@ -153,7 +154,7 @@ h2 {
   line-height: 1.2;
   padding-bottom:.4em;
 }
-h4 {
+.column.two h4 {
   color:#5e5f5f;
   font-weight:400;
   margin-bottom:1.1em;
