@@ -1,0 +1,185 @@
+/*
+ Theme Name:     NARA
+ Theme URI:      https://web.wsu.edu/
+ Description:    A child theme for Washington State University's Spine framework
+ Author:         WSU University Communications
+ Author URI:     https://ucomm.wsu.edu/
+ Template:       spine
+ Version:        0.0.1
+*/
+* {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	font-size:100%;
+}
+*:hover {
+	transition-property: background, color;
+	transition-duration: .5s;
+	transition-timing-function: ease-out;
+}
+#jacket,
+#spine {
+    border-top:14px solid #f3f3f3;
+}
+html {
+  background:#fff;
+}
+/****************************************************************************
+	Spine adjustments
+****************************************************************************/
+
+.spine-actions,
+.spine-footer {
+	display: none;
+}
+
+#wsu-signature {
+	background-image:none;
+	pointer-events: none;
+	background-size: contain;
+}
+
+#spine.cropped.skimmed #wsu-signature,
+.print #wsu-signature,
+.spine-mobile #wsu-signature {
+	background-image: none;
+	background-color: #3e3e3d;
+}
+
+#shelve, #shelve::after,
+#shelve::before {
+	border-color: #fff;
+}
+/*.spine-mobile #spine header:before {
+	display: block;
+	content: "NARA";
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: 70px;
+	padding-top: 13px;
+	z-index: 100000;
+	font-weight: 300;
+	font-family: "open sans";
+	font-size: 2rem;
+}*/
+#spine .spine-sitenav a:hover,
+#spine .spine-sitenav li.dogeared>a {
+	color: #a03321;
+}
+@media screen and (max-width: 989px) {
+  #binder #spine header {
+    background-color:#3e3e3d;
+  }
+}
+/****************************************************************************
+	HTML adjustments
+****************************************************************************/
+main {
+	background: #fff;
+	color: #3e3e3d;
+}
+
+.column.pad-top {
+  padding-top:6rem;
+}
+
+hr {
+    border: none;
+    margin: 1em 0;
+    height: 8px;
+    background-color: #f3f3f3;
+}
+/****************************************************************************
+	Header adjustments
+****************************************************************************/
+.main-header {
+	background-color: transparent;
+  background-image:url('assets/NARA-logo.png');
+  background-repeat:no-repeat;
+  background-position: 20px;
+  margin-bottom:2em;
+}
+
+.main-header sup,
+.main-header sub {
+	display: none;
+}
+
+/****************************************************************************
+	Typography adjustments
+****************************************************************************/
+a {
+	color: #a03321;
+	transition: color .3s ease-in-out;
+}
+
+a:hover {
+	color: #cb3f28;
+}
+
+p,
+main ol li,
+main ul li {
+	font-size: 1.1em;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: #268fca;
+}
+h2 {
+  font-size: 2.1rem;
+  padding-bottom:.3em;
+}
+/****************************************************************************
+	Homepage
+****************************************************************************/
+.builder-section-banner .column,
+.spacing-loose .single.gutter.builder-section-banner .column:not(.gutterless) {
+  padding:0;
+}
+.builder-banner-inner-content {
+    text-align: center;
+}
+.builder-banner-inner-content h1 {
+  color:#fff;
+  border-bottom:1px solid #fff;
+  padding-bottom:.2em;
+}
+.five-teams .size-thumbnail {
+  width:120px;
+  height:120px;
+}
+.five-teams-label b,
+.five-teams-label strong {
+  font-size:2.2rem;
+  line-height: 1;
+}
+.five-teams-label {
+  font-size:1.1rem;
+  color:#5e5f5f;
+}
+/****************************************************************************
+	Footer
+****************************************************************************/
+footer {
+  font-family: 'open sans';
+  font-weight:300;
+  margin-left:198px;
+  border-top:1px solid #f3f3f3;
+  padding-top:1.2em;
+}
+/****************************************************************************
+	Media Quries
+****************************************************************************/
+@media screen and (max-width: 990px) {
+  .column.pad-top {
+    padding-top:0;
+  }
+}
