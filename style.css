@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.5
+ Version:        0.0.6
 */
 * {
 	box-sizing: border-box;
@@ -195,6 +195,23 @@ h3 {
 .five-teams-label {
   font-size:1.1rem;
   color:#5e5f5f;
+}
+/****************************************************************************
+	Blog & archive
+****************************************************************************/
+footer.article-footer,
+.single-post footer.main-footer {
+	margin-left:0;
+}
+h2.article-title {
+	padding-bottom:.1em;
+}
+.article-header hgroup.source,
+.article-header .hgroup.source {
+	padding-bottom:2em;
+}
+.single-post .article-title {
+	margin-bottom:.5em;
 }
 /****************************************************************************
 	Utilities
