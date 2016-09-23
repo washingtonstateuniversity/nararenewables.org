@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.6
+ Version:        0.0.8
 */
 * {
 	box-sizing: border-box;
@@ -53,19 +53,6 @@ html {
 #shelve::before {
 	border-color: #fff;
 }
-/*.spine-mobile #spine header:before {
-	display: block;
-	content: "NARA";
-	position: absolute;
-	color: #fff;
-	top: 0;
-	left: 70px;
-	padding-top: 13px;
-	z-index: 100000;
-	font-weight: 300;
-	font-family: "open sans";
-	font-size: 2rem;
-}*/
 #spine .spine-sitenav a:hover,
 #spine .spine-sitenav li.dogeared>a {
 	color: #a03321;
@@ -223,8 +210,8 @@ h2.article-title {
 	HTML Snippet 763-68
 ****************************************/
 .five-teams-inside .size-thumbnail {
-  width:70px;
-  height:70px;
+  width:80px;
+  height:80px;
 	margin-bottom: 0;
 	margin-top: .8em;
 }
@@ -277,6 +264,10 @@ h2.article-title {
 }
 .orgs li.list-heading h3 {
 	padding-top:0;
+}
+.org-table .tablepress td {
+	padding-top:1.4em;
+	padding-bottom:1.4em;
 }
 /****************************************************************************
 	Footer
