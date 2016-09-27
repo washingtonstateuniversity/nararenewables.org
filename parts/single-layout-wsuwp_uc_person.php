@@ -29,9 +29,10 @@
 			if ( ! empty( $display_name ) ) : ?><h1 class="article-title"><?php echo esc_html( $display_name ); ?></h1><?php endif;
 			if ( ! empty( $display_data['title'] ) ) : ?><div class="person-title"><?php echo esc_html( $display_data['title'] ); ?></div><?php endif;
 			if ( ! empty( $display_data['title_secondary'] ) ) : ?><div class="person-title-secondary"><?php echo esc_html( $display_data['title_secondary'] ); ?></div><?php endif;
-			if ( ! empty( $display_data['office'] ) ) : ?><div class="person-office"><strong>Affiliation:</strong> <?php echo esc_html( $display_data['office'] ); ?></div><?php endif;
+			if ( ! empty( $display_data['office'] ) ) : ?><div class="person-office"><strong>Organization:</strong> <?php echo esc_html( $display_data['office'] ); ?></div><?php endif;
 			if ( ! empty( $display_data['email'] ) ) : ?><div class="person-email"><strong>Email:</strong><a href="mailto:<?php echo esc_html( $display_data['email'] ); ?>"> <?php echo esc_html( $display_data['email'] ); ?></a></div><?php endif;
 			if ( ! empty( $display_data['phone'] ) ) : ?><div class="person-phone"><strong>Phone:</strong> <?php echo esc_html( $display_data['phone'] ); ?></div><?php endif;
+      if ( ! empty( $display_data['url'] ) ) : ?><div class="person-url"><strong>Website:</strong> <?php echo esc_html( $display_data['url'] ); ?></div><?php endif;
 		} ?>
   </div>
 	</div>

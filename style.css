@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.1.0
+ Version:        0.1.1
 */
 * {
 	box-sizing: border-box;
@@ -290,11 +290,10 @@ h2.article-title {
 /****************************************
 	People
 ****************************************/
-.single-wsuwp_uc_person .h1.article-title {
+.single-wsuwp_uc_person h1.article-title {
 	width:inherit;
 	margin-bottom:.5em;
 }
-
 /****************************************************************************
 	Footer
 ****************************************************************************/
