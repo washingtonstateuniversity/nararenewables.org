@@ -276,18 +276,25 @@ h2.article-title {
 	width:100%;
 	padding-left:0;
 	padding-right:0;
-	justify-content: center;
 }
 .universities li {
 	list-style: none;
 	margin-bottom:30px;
 	max-width:150px;
-	margin-right:50px;
+	margin-right:80px;
 	text-align: center;
 }
 .universities li:last-of-type{
 	margin-right:0;
 }
+/****************************************
+	People
+****************************************/
+.single-wsuwp_uc_person .h1.article-title {
+	width:inherit;
+	margin-bottom:.5em;
+}
+
 /****************************************************************************
 	Footer
 ****************************************************************************/
