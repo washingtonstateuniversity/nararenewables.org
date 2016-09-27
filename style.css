@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.1.1
+ Version:        0.1.2
 */
 * {
 	box-sizing: border-box;
@@ -156,6 +156,9 @@ h3 {
   padding-bottom:.5em;
   border-bottom:1px solid #5e5f5f;
 }
+blockquote {
+	font-family:"Open Sans";
+}
 /****************************************************************************
 	Homepage
 ****************************************************************************/
@@ -171,19 +174,6 @@ h3 {
   border-bottom:1px solid #fff;
   padding-bottom:.2em;
   margin-bottom:0;
-}
-.five-teams .size-thumbnail {
-  width:120px;
-  height:120px;
-}
-.five-teams-label b,
-.five-teams-label strong {
-  font-size:2.2rem;
-  line-height: 1;
-}
-.five-teams-label {
-  font-size:1.1rem;
-  color:#5e5f5f;
 }
 /****************************************************************************
 	Blog & archive
@@ -209,6 +199,19 @@ h2.article-title {
 /****************************************
 	HTML Snippet 763-68
 ****************************************/
+.five-teams .size-thumbnail {
+  width:120px;
+  height:120px;
+}
+.five-teams-label b,
+.five-teams-label strong {
+  font-size:2.2rem;
+  line-height: 1;
+}
+.five-teams-label {
+  font-size:1.1rem;
+  color:#5e5f5f;
+}
 .five-teams-inside .size-thumbnail {
   width:80px;
   height:80px;
@@ -226,6 +229,10 @@ h2.article-title {
 }
 .five-teams-inside hr {
 	height:2px;
+}
+.home h2.five-teams-heading,
+.home .five-teams .full-size {
+	display:none;
 }
 /****************************************
 	Teams
@@ -293,6 +300,25 @@ h2.article-title {
 .single-wsuwp_uc_person h1.article-title {
 	width:inherit;
 	margin-bottom:.5em;
+}
+/****************************************
+	Buttons and forms
+****************************************/
+.button {
+	background:#a03321;
+	border-style:none;
+	border-width:0;
+	border-color:none;
+	border-radius: 0;
+	color:#fff;
+	font-size:1.2rem;
+	font-weight:300;
+	letter-spacing:1px;
+
+}
+.button:hover {
+	border:0;
+	color:#a03321;
 }
 /****************************************************************************
 	Footer
