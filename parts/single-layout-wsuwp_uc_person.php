@@ -32,7 +32,8 @@
 			if ( ! empty( $display_data['office'] ) ) : ?><div class="person-office"><strong>Organization:</strong> <?php echo esc_html( $display_data['office'] ); ?></div><?php endif;
 			if ( ! empty( $display_data['email'] ) ) : ?><div class="person-email"><strong>Email:</strong><a href="mailto:<?php echo esc_html( $display_data['email'] ); ?>"> <?php echo esc_html( $display_data['email'] ); ?></a></div><?php endif;
 			if ( ! empty( $display_data['phone'] ) ) : ?><div class="person-phone"><strong>Phone:</strong> <?php echo esc_html( $display_data['phone'] ); ?></div><?php endif;
-      if ( ! empty( $display_data['url'] ) ) : ?><div class="person-url"><strong>Website:</strong> <?php echo esc_html( $display_data['url'] ); ?></div><?php endif;
+      $person_url = get_post_meta( get_the_id() , '_wsuwp_uc_object_url', true );
+      if ( ! empty( $person_url ) ) : ?><div class="person-url"><strong>Website:</strong> <a href="<?php echo esc_url( $person_url ); ?>" target="_blank"> <?php echo esc_url( $person_url ); ?></a></div><?php endif;
 		} ?>
   </div>
 	</div>
