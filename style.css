@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.1.4
+ Version:        0.1.5
 */
 * {
 	box-sizing: border-box;
@@ -88,6 +88,10 @@ hr {
   height:300px;
   margin-bottom:3em;
 }
+.article-header hgroup.source,
+.article-header .hgroup.source {
+	display:none;
+}
 /****************************************************************************
 	Header adjustments
 ****************************************************************************/
@@ -151,6 +155,7 @@ h3 {
 h5 {
 	font-weight:300;
 }
+.wsuwp-uc-people h3,
 .column.two h4 {
   color:#5e5f5f;
   font-weight:400;
@@ -161,6 +166,12 @@ h5 {
 }
 blockquote {
 	font-family:"Open Sans";
+	font-weight:700;
+	font-size:1.2rem;
+	color:#6d6d6d;
+}
+.quotables blockquote {
+	font-size:.9rem;
 }
 .labeled {
     background: #333;
