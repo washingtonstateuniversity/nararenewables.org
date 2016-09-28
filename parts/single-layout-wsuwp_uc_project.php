@@ -29,8 +29,9 @@
 	<div class="column two">
 		<h5>Student opportunities</h5>
 		<p><a href="http://stage.nara.wsu.edu/training-opportunities/">Find out more about working with NARA</a></p>
-		<h4>Team members</h4>
+
 		<div class="team-people">
+				<h4>Team members</h4>
 			<?php
 
 			$team_people = wsuwp_uc_get_object_people( get_the_ID() );
@@ -44,7 +45,7 @@
 					</figure>
 					<?php endif; ?>
 					<h5><a href="<?php echo esc_url( get_the_permalink( $team_person->ID ) ); ?>"><?php echo esc_html( $team_person->post_title ); ?></a></h5>
-				<?php
+				</div><?php
 			}
 
 			?>

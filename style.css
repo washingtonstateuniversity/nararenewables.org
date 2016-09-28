@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.1.6
+ Version:        0.1.7
 */
 * {
 	box-sizing: border-box;
@@ -330,6 +330,30 @@ article.wsuwp_uc_person h3.article-title {
 	padding-bottom:.4em;
 }
 .post-type-archive-wsuwp_uc_person .archive-footer {
+	display:none;
+}
+.team-people {
+	background: #efefef;
+	padding:1em;
+	position:relative;
+	float:left;
+	width:100%;
+	display:block;
+}
+.team-people .team-person {
+	border-bottom:1px solid #fff;
+	padding-bottom:1em;
+	padding-top:1em;
+	min-height:80px;
+	display:block;
+}
+.team-people .team-person:last-of-type {
+	border-bottom:0;
+}
+.team-people .team-person img {
+	width:80px;
+}
+.single-wsuwp_uc_project .main-footer {
 	display:none;
 }
 /****************************************
