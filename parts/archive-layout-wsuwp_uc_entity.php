@@ -22,11 +22,6 @@
 								?><figure class="article-thumbnail"><?php the_post_thumbnail( 'spine-small_size' ); ?></figure><?php
 							}
 
-							// If a manual excerpt is available, display this. Otherwise, only the most basic information is needed.
-							if ( $post->post_excerpt ) {
-								echo get_the_excerpt();
-							}
-
 							?>
 
 							<header class="article-header">
@@ -34,6 +29,10 @@
 									<h2 class="article-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 								</hgroup>
 							</header>
+
+							<div class="article-content">
+								<?php the_content(); ?>
+							</div>
 
 						</article>
 
