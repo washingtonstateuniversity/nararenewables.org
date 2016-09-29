@@ -1,3 +1,10 @@
+<?php
+/**
+ * Archive view layout for "Entities" created through University Center Objects.
+ *
+ * This view is represented as "Organization" on nararenewables.org.
+ */
+?>
 <section class="row single gutter pad-ends">
 
 	<div class="column one">
@@ -6,13 +13,6 @@
 </section>
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php
-			/**
-			 * Single view layout for an "Entity" created through University Center Objects.
-			 *
-			 * This view is represented as "Organization" on nararenewables.org.
-			 */
-			?>
 			<section class="row side-left gutter pad-ends">
 
 				<div class="column one">
