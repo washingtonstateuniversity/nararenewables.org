@@ -28,7 +28,7 @@
 	</div>
 	<div class="column two">
 		<h5>Student opportunities</h5>
-		<p><a href="http://stage.nara.wsu.edu/training-opportunities/">Find out more about working with NARA</a></p>
+		<p><a href="<?php echo esc_url( home_url( '/training-opportunities/' ) ); ?>">Find out more about working with NARA</a></p>
 
 		<div class="team-people">
 				<h4>Team members</h4>
