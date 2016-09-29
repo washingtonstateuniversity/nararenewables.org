@@ -1,7 +1,9 @@
-<section class="row side-right gutter pad-ends">
+<section class="row single gutter pad-ends">
 
 	<div class="column one">
-<h1>Members</h1>
+		<h1>Members</h1>
+	</div><!--/column-->
+</section>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php
@@ -11,11 +13,11 @@
 			 * This view is represented as "Organization" on nararenewables.org.
 			 */
 			?>
-			<section class="row single gutter pad-ends">
+			<section class="row side-left gutter pad-ends">
 
 				<div class="column one">
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 							<?php
 
 							if ( has_post_thumbnail() ) {
@@ -23,28 +25,20 @@
 							}
 
 							?>
-
-							<header class="article-header">
-								<hgroup>
-									<h2 class="article-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-								</hgroup>
-							</header>
-
-							<div class="article-content">
-								<?php the_content(); ?>
-							</div>
-
-						</article>
-
-
 				</div><!--/column-->
-
+				<div class="column two">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="article-header">
+						<hgroup>
+							<h2 class="article-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+						</hgroup>
+					</header>
+					<div class="article-content">
+						<?php the_content(); ?>
+					</div>
+				</div>
+				</article>
 			</section>
 
 
 		<?php endwhile; // end of the loop. ?>
-
-	</div><!--/column-->
-	<div class="column two">
-	</div>
-</section>
