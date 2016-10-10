@@ -46,7 +46,7 @@ if ( spine_has_featured_image() ) {
 
 			$team_people = wsuwp_uc_get_object_people( get_the_ID() );
 
-			foreach( $team_people as $team_person ) {
+			foreach ( $team_people as $team_person ) {
 				$team_person = get_post( $team_person['id'] );
 				?><div class="team-person">
 					<?php if ( has_post_thumbnail( $team_person->ID ) ) : ?>
