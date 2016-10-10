@@ -1,3 +1,5 @@
+var Promise = require('es6-promise').polyfill();
+
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -49,7 +51,7 @@ module.exports = function(grunt) {
                     "important": false,                    // This should be set to 2 one day.
                     "unqualified-attributes": false,       // Should probably be 2 one day.
                     "qualified-headings": false,
-                    "known-properties": 1,              // Okay to ignore in the case of known unknowns.
+                    "known-properties": 1,                 // Okay to ignore in the case of known unknowns.
                     "duplicate-background-images": 2,
                     "duplicate-properties": 2,
                     "star-property-hack": 2,
@@ -58,7 +60,8 @@ module.exports = function(grunt) {
                     "shorthand": 2,
                     "empty-rules": 2,
                     "vendor-prefix": 2,
-                    "zero-units": 2
+                    "zero-units": 2,
+                    "order-alphabetical": false
                 }
             }
         },
@@ -70,6 +73,24 @@ module.exports = function(grunt) {
             temp: [ 'tmp-style.css', 'tmp-style.css.map' ]
         },
 
+        copy: {
+            style: {
+                expand: true,
+                src: 'style.css',
+                dest: 'style-guide'
+            },
+            scripts: {
+                expand: true,
+                src: 'js/*.js',
+                dest: 'style-guide'
+            },
+            images: {
+                expand: true,
+                src: 'images/*.*',
+                dest: 'style-guide'
+            }
+        },
+
         phpcs: {
             plugin: {
                 src: './'
@@ -77,6 +98,24 @@ module.exports = function(grunt) {
             options: {
                 bin: "vendor/bin/phpcs --extensions=php --ignore=\"*/vendor/*,*/node_modules/*\"",
                 standard: "phpcs.ruleset.xml"
+            }
+        },
+
+        watch: {
+            styles: {
+                files: ['css/*.css', 'js/*.js'],
+                tasks: ['default']
+            }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    open: 'http://localhost:8000/home.html',
+                    base: 'style-guide',
+                    port: 8000,
+                    hostname: 'localhost'
+                }
             }
         }
 
@@ -87,7 +126,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( "grunt-contrib-csslint" );
     grunt.loadNpmTasks( "grunt-contrib-clean" );
     grunt.loadNpmTasks( "grunt-phpcs" );
+    grunt.loadNpmTasks( "grunt-contrib-watch" );
+    grunt.loadNpmTasks( "grunt-contrib-connect" );
+    grunt.loadNpmTasks( "grunt-contrib-copy" );
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'postcss', 'csslint', 'clean']);
+    grunt.registerTask('default', ['concat', 'postcss', 'csslint', 'clean', 'copy']);
+    grunt.registerTask( "serve", [ "connect", "watch" ] );
 };
