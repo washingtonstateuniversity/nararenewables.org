@@ -33,8 +33,8 @@
 					<h3 class="article-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo esc_html( $display_name ); ?></a></h3><?php
 
 					if ( ! empty( $display_data['title'] ) ) : ?><div class="person-title"><?php echo esc_html( $display_data['title'] ); ?></div><?php endif;
-				if ( ! empty( $display_data['office'] ) ) : ?><div class="person-office"><strong><?php echo esc_html( $display_data['office'] ); ?></strong> </div><?php endif;
-				if ( ! empty( $display_data['email'] ) ) : ?><div class="person-email"><a href="mailto:<?php echo esc_html( $display_data['email'] ); ?>"> <?php echo esc_html( $display_data['email'] ); ?></a></div><?php endif;
+					if ( ! empty( $display_data['office'] ) ) : ?><div class="person-office"><strong><?php echo esc_html( $display_data['office'] ); ?></strong> </div><?php endif;
+					if ( ! empty( $display_data['email'] ) ) : ?><div class="person-email"><a href="mailto:<?php echo esc_html( $display_data['email'] ); ?>"> <?php echo esc_html( $display_data['email'] ); ?></a></div><?php endif;
 
 
 				} ?>
