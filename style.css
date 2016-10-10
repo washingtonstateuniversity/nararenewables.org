@@ -462,9 +462,7 @@ article.wsuwp_uc_person h3.article-title {
 ****************************************/
 .button {
 	background: #a03321;
-	border-style: none;
-	border-width: 0;
-	border-color: none;
+	border: none;
 	border-radius: 0;
 	color: #fff;
 	font-size: 1.2rem;
@@ -473,7 +471,7 @@ article.wsuwp_uc_person h3.article-title {
 }
 
 .button:hover {
-	border: 0;
+	border: none;
 	color: #a03321;
 }
 
